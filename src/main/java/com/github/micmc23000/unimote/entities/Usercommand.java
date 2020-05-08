@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.micmc23000.unimotejpademo;
+package com.github.micmc23000.unimote.entities;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -118,7 +118,7 @@ public class Usercommand implements Serializable {
 
 	@Override
 	public String toString() {
-		return "com.github.micmc23000.unimotejpademo.Usercommand[ id=" + id + " ]";
+		return "com.github.micmc23000.unimotejpademo.service.Usercommand[ id=" + id + " ]";
 	}
 	
 }

@@ -1,0 +1,71 @@
+<form name="nameOfForm" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+      <script language="JavaScript">
+    function () {
+       $selectedkeys 
+    }
+  </script>
+  <?php
+	
+	  
+      $numberOfButtons= array();
+	  $Keys= array();
+	  $SelectedKeys=array();
+	  if(($_GET)!=0){$numberOfButtons=$_GET;}
+      
+	  for ($Button= 0; $Button< 20; $Button++)
+      {
+      $numberOfButtons[] = $Button;
+      }
+      echo 'select the number of buttons on your remote ';
+      ?>
+		<select name="Buttons" onchange="this.form.submit()">
+      <?php foreach($numberOfButtons as $option){
+      echo "<option value='{$option}'>{$option}</option>";
+      }
+      echo "</select>";
+
+      ?>
+
+   
+
+<?php
+	if($_GET)
+	{
+		echo 'The number of buttons selected is '.$_GET['Buttons'];
+		for($NumberOfKeysOnRemote=1; $NumberOfKeysOnRemote<=$_GET['Buttons']; $NumberOfKeysOnRemote++)	
+			{
+	?>
+<p>
+	<?php 
+	for ($KeysInSysyem= 0; $KeysInSysyem< 20; $KeysInSysyem++)
+      {
+      $Keys[] = $KeysInSysyem;
+      }
+	echo 'button '.$NumberOfKeysOnRemote,' function'; ?>
+		<select name="<?php '($NumberOfKeysOnRemote)'; ?>" onclick ="$selectedkeys[$NumberOfKeysOnRemote]={$keyOptions}">
+			<?php foreach($Keys as $keyOptions){
+      echo "<option name='($NumberOfKeysOnRemote)' value='{$keyOptions}'>{$keyOptions}</option>";
+      }
+      echo "</select>";
+
+      ?>
+		
+		<?php
+	
+		}
+	}
+else{  	?>
+<p>please select the number of buttons on your remote</p>
+		<?php 
+	}
+		?>
+		</form></p>
+		<?php
+		if($_GET)
+		{
+			foreach($_GET as $k=>$v)
+			{
+				${$k}=$v;
+			}
+		}
+?>

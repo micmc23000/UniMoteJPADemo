@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.micmc23000.unimotejpademo.service;
+package com.github.micmc23000.unimote.service;
 
-import com.github.micmc23000.unimotejpademo.Usercommand;
+import com.github.micmc23000.unimote.entities.Usercommand;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
  * @author michael
  */
 @Stateless
-@Path("usercommands")
+@Path("com.github.micmc23000.unimotejpademo.service.usercommand")
 public class UsercommandFacadeREST extends AbstractFacade<Usercommand> {
 
 	@PersistenceContext(unitName = "com.github.micmc23000_UniMoteJPADemo_war_1PU")
